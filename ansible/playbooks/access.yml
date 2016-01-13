@@ -1,7 +1,8 @@
 - hosts: web-servers
   user: root
   roles:
-    - common
+    - { role: postfix, tags: postfix }
+    - { role: common, tags: common}
     - httpd
     - ruby
     - nodejs
