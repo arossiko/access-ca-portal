@@ -1,0 +1,14 @@
+---
+
+SendGridUsername: Username
+smtp_password: Password
+smtp_use_tls: 'yes'
+smtp_tls_cert_file: /etc/grid-security/hostcert.pem
+smtp_tls_key_file: /etc/grid-security/hostkey.pem
+inet_interfaces: loopback-only
+inet_protocols: all
+relayhost: smtp.sendgrid.net
+
+smtp_sasl_auth_enable: yes
+smtp_sasl_security_options: noanonymous
+smtp_tls_security_level: encrypt

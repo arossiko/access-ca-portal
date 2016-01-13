@@ -1,0 +1,8 @@
+---
+
+- name: Postfix main.cf configuration
+  template: src=../templates/etc/postfix/main.cf.j2
+            dest=/etc/postfix/main.cf backup=yes
+            owner=root group=root mode=0644
+  notify:
+    - restart postfix

@@ -1,0 +1,7 @@
+---
+
+- name: Install postfix
+  action: yum name=postfix state=latest
+
+- name: Install the missing module dependency
+  action: yum name=cyrus-sasl-plain
